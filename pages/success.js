@@ -1,5 +1,5 @@
 import ReturnBookSucceedMessage from "../components/ReturnBookSucceedMessage";
-import ReturnlibLogo from "../components/ReturnLibLogo";
+import ReturnlibLogo from "../components/ReturnlibLogo";
 
 function Success(props) {
   return (
