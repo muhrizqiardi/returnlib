@@ -1,6 +1,13 @@
+import { useContext } from "react";
+import { AppContext } from "../contexts/AppContext";
+
 function ReturnBookButton(props) {
-  return (
-    <button className="transform hover:scale-90 transition-transform duration-300">
+  const { setBookIsReturned, bookIsFound } = useContext(AppContext);
+  return bookIsFound ? (
+    <button
+      onClick={() => setBookIsReturned(true)}
+      className="transform hover:scale-90 transition-transform duration-300"
+    >
       <svg
         width="218"
         height="64"
@@ -15,6 +22,8 @@ function ReturnBookButton(props) {
         />
       </svg>
     </button>
+  ) : (
+    <></>
   );
 }
 export default ReturnBookButton;

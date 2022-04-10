@@ -1,6 +1,16 @@
+import { useContext } from "react";
+import { AppContext } from "../contexts/AppContext";
 function SearchButton(props) {
-  return (
-    <button className="w-min transform hover:scale-90 transition-transform duration-300">
+  const { handleSearch, setSearchButtonIsClicked, bookIsFound } =
+    useContext(AppContext);
+  return !bookIsFound ? (
+    <button
+      onClick={() => {
+        setSearchButtonIsClicked(true);
+        handleSearch();
+      }}
+      className="w-min transform hover:scale-90 transition-transform duration-300"
+    >
       <svg
         width="64"
         height="64"
@@ -15,6 +25,8 @@ function SearchButton(props) {
         />
       </svg>
     </button>
+  ) : (
+    <></>
   );
 }
 export default SearchButton;

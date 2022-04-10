@@ -1,5 +1,10 @@
+import { useContext } from "react";
+import { AppContext } from "../contexts/AppContext";
+
 function ErrorMessage(props) {
-  return (
+  const { isError, searchButtonIsClicked } = useContext(AppContext);
+
+  return isError && searchButtonIsClicked ? (
     <div className="ErrorMessage">
       <svg
         width="138"
@@ -18,6 +23,8 @@ function ErrorMessage(props) {
         />
       </svg>
     </div>
+  ) : (
+    <></>
   );
 }
 export default ErrorMessage;
