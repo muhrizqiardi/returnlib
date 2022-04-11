@@ -7,7 +7,7 @@ function BookItem(props) {
   return bookIsFound ? (
     <div className="grid grid-cols-3">
       <div className="">
-        <img src="" alt="" className="w-[100px] h-[150px] bg-gray-100" />
+        <img src={bookData?.cover ?? ""} alt="" className="w-[100px] h-[150px] bg-gray-100" />
       </div>
       <div className="w-96 flex flex-col items-stretch col-span-2">
         <p className="mb-1 font-bold">{bookData.genre}</p>
