@@ -1,3 +1,28 @@
+# Returnlib
+
+Program ini dapat dibuka di https://returnlib.vercel.app
+
+Program/website ini dibuat menggunakan Next.js. Untuk menjalankannya secara lokal, diperlukan Node.js minimal versi 12 atau lebih. 
+
+
+Untuk menjalankan, pertama buka command line, dan pergi ke direktori project ini. Lalu instal *dependencies* nya terlebih dahulu dengan menjalankan 
+
+```bash
+npm install
+```
+
+Lalu, jika sudah selesai instal, jalankan server dengan menjalankan
+
+```bash
+npm run dev
+```
+
+Jika server sudah berjalan, buka websitenya secara lokal di http://localhost:3000
+
+
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
